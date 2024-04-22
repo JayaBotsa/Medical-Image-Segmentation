@@ -11,10 +11,10 @@ For both pretraining and fine-tuning, an Adam optimizer was utilized with an ini
 The development environment used for this experiment is outlined in Table 5.1.1.
 
 # Component	Version
-Python	3.10.12
-MONAI	v1.3
-PyTorch	v2.1.0
-CUDA	12.2
+- Python	3.10.12
+- MONAI	v1.3
+- PyTorch	v2.1.0
+- CUDA	12.2
 
 # Best Model Selection Standard
 As the ground truth label is provided for the test dataset, two measures were employed to select the best model checkpoint:

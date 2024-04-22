@@ -1,10 +1,18 @@
 # Medical-Image-Segmentation
 Detection and Segmentation of Intracranial Aneurysms using UNETR
+
 # Introduction
-This repository contains the code and experimental setup for a series of experiments conducted to determine the best model for segmenting aneurysms from a given dataset. Various patch sizes were tested with different algorithms, with the ultimate selection being a universally chosen patch size of 128×128×128 in order to cover most of the image space. The dataset was split into train-validation-test sets with a ratio of 75%-20%-25% to prevent overfitting and introduce independence in the model.
+Localized enlargements of the arterial blood arteries caused by vascular weakening are known as Cerebral Aneurysms. Aneurysmal Subarachnoid Hemorrhage (aSAH), resulting from the rupture of the blood vessel, is a life-threatening condition with a high percentage of mortality and morbidity. It can lead to cognitive impairment and have long-term effects if not identified in the early stages. Accurate detection of aneurysms is crucial for treatment or rupture avoidance.
+
+In order to address these challenges, early detection of aneurysms and the prevention of rupture are essential tasks for physicians. Developing and assessing a deep learning pipeline dedicated to automatically identifying and segmenting aneurysms can be immensely beneficial. Deep learning models such as Convolutional Neural Networks (CNNs) and Transformer architectures have shown advantages over manual methods, which are time-consuming, labor-intensive, and prone to human errors.
+
+Objective
+The aim of this thesis is to build a model capable of automatically detecting and segmenting intracranial aneurysms by following various pre- and post-processing steps. The model should be designed to work with limited data by incorporating different augmentations or utilizing pre-training techniques.
 
 # Experimental Setup
-Implementation Details
+This repository contains the code and experimental setup for a series of experiments conducted to determine the best model for segmenting aneurysms from a given dataset. Various patch sizes were tested with different algorithms, with the ultimate selection being a universally chosen patch size of 128×128×128 in order to cover most of the image space. The dataset was split into train-validation-test sets with a ratio of 75%-20%-25% to prevent overfitting and introduce independence in the model.
+
+# Implementation Details
 For both pretraining and fine-tuning, an Adam optimizer was utilized with an initial learning rate varying among different models and pretraining phases, typically ranging from 1e-3 to 1e-5. A constant decay rate of 1e-5 was employed, and a cosine scheduler was utilized for all models. The codebase was implemented using the MONAI library and PyTorch. Multi-GPU training was not utilized due to the capabilities of the available GPUs (Tesla A100 and Tesla V100-SXM2).
 
 # Development Environment
